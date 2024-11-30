@@ -137,7 +137,7 @@ public class ArrCharOps {
         double sum = 0;
         int n = 1;
         for (int i = 0; i < arr.length; i++){
-            sum += Math.pow(arr[i]*7, arr.length - n);
+            sum += arr[i]*Math.pow(7, arr.length - n);
             n++;
 
         }
