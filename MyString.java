@@ -1,14 +1,6 @@
 public class MyString {
     public static void main(String[] args) {
-       System.out.println(contains("baba yaga", "baba"));
-       System.out.println(contains("baba yaga", ""));
-       System.out.println((contains("baba yaga", "John Wick is the baba yaga") )); // fale
-      boolean var3 = !MyString.contains("baba yaga", "John Wick is the baba yaga");
-      boolean var4 = !MyString.contains("baba yaga", "Yaga");
-      boolean var5 = MyString.contains("baba yaga", "babayaga"); //זה מחזיר נכון במקום לא נכון
-      System.err.println(var3);
-      System.out.println(var4);
-      System.out.println(var5);
+
         System.out.println("Testing lowercase:");
         System.out.println("UnHappy : " + lowerCase("UnHappy"));
         System.out.println("This costs 15 Sheksls : " + lowerCase("This costs 15 Sheksls"));
@@ -44,7 +36,7 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         boolean isSub = false;
         if (str2.length() == 0)
-        return false;
+        return true;
         for (int i = 0; i < str1.length() && !isSub; i++){
             if (str2.charAt(0) == str1.charAt(i)){
                 isSub = true;
