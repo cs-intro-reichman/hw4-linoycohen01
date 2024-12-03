@@ -20,13 +20,12 @@ public class MyString {
     public static String lowerCase(String str) {
         String lower = "";
         for (int i = 0; i < str.length(); i++){
-            if((str.charAt(i) >= 97 && str.charAt(i) <= 122) || str.charAt(i) == 32
-                                     || (str.charAt(i) >= 48 && str.charAt(i) <= 57))
-            lower += str.charAt(i);
-            else{
+            if(str.charAt(i) >= 65 && str.charAt(i) <= 90){
                 char c = str.charAt(i);
                 lower += (char)(c + 32);
-            }
+            }else{
+            lower += str.charAt(i);
+             }
         }
         return lower;
     }
@@ -34,7 +33,7 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         boolean isSub = false;
-        for (int i = 0; i < str1.length(); i++){
+        for (int i = 0; i < (str1.length() - str2.length() + 1); i++){
             if (str2.charAt(0) == str1.charAt(i)){
                 isSub = true;
                 for (int j = 0; j < str2.length() && isSub; j++){
