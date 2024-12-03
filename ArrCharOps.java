@@ -135,10 +135,10 @@ public class ArrCharOps {
         if (arr.length == 0)
         return 0;
         long sum = 0;
-        int n = 1;
+        int n = arr.length;
         for (int i = 0; i < arr.length ; i++){
-            sum += arr[i]*Math.pow(7, arr.length - n);
-            n++;
+            sum += arr[i]*Math.pow(7, n - 1 -i);
+            
 
         }
         return sum;
